@@ -1,0 +1,19 @@
+.postsPageContainer {
+  max-width: 880px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-left: 30px;
+}
+.noPostsMessage {
+  font-size: 30px;
+  text-align: center;
+  margin: 40px;
+  color: black;
+}
+.sideBarBox {
+  flex: 0 0 260px;
+
+  min-height: 240px;
+  height: 100%;
+}

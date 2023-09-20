@@ -1,0 +1,238 @@
+.postBody {
+  height: auto;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  background-color: hwb(0 100% 0% / 0.888);
+
+  border-radius: 6px;
+}
+.postImageBody {
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+
+  overflow: hidden;
+  img {
+    max-width: 100%;
+
+    text-align: center;
+    height: 710px;
+    object-fit: cover;
+  }
+  margin-bottom: 10px;
+}
+
+.postInfoBody {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.postText {
+  line-height: 1.2;
+  display: block;
+  font-style: italic;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  color: gray;
+  margin-left: 30px;
+  margin-right: 30px;
+  overflow-wrap: anywhere;
+}
+.iconView {
+  display: inline-flex;
+  text-decoration: none;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(77, 77, 77);
+  font-size: 25px;
+  border: none;
+  background-color: transparent;
+  transition: color 250ms linear;
+  &:hover {
+    color: rgb(255, 130, 130);
+  }
+  span {
+    margin-left: 5px;
+    display: block;
+    font-size: 14px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+.iconEye {
+  display: inline-flex;
+  text-decoration: none;
+  align-items: center;
+  color: rgb(77, 77, 77);
+  font-size: 25px;
+  border: none;
+  background-color: transparent;
+  span {
+    margin-left: 10px;
+    display: block;
+    font-size: 14px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+.socialControlsBody {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 30px 30px 30px;
+}
+
+//EditDelete
+.editDeleteControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 30px 10px 30px;
+}
+.buttonDelete {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 19px;
+  color: gray;
+  transition: color 250ms linear;
+  &:hover {
+    color: blue;
+  }
+}
+.addPostBth {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: rgb(255, 118, 118);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 40px;
+  color: white;
+  transition: background-color 250ms linear;
+  &:hover {
+    background-color: rgb(255, 59, 59);
+  }
+}
+//PostPage----------------------------------------------------------
+.postHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 30px 0px 30px;
+}
+.postPageBody {
+  display: flex;
+}
+.postPagePost {
+  flex: 0 1 100%;
+  margin-left: 40px;
+}
+.postPageCommentsBox {
+  flex: 0 1 100%;
+}
+.controlsPostPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60px;
+  justify-content: space-between;
+}
+.controlsBody {
+  display: flex;
+}
+.fromPostPageBox {
+  position: relative;
+}
+.labelComment {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-size: 19px;
+  font-weight: 600;
+  span {
+    margin-bottom: 10px;
+  }
+}
+.inputPostPage {
+  box-sizing: border-box;
+  width: 100%;
+
+  padding: 15px 15px 15px 20px;
+  border-radius: 6px;
+  min-height: 120px;
+  height: 100%;
+  resize: none;
+  border: none;
+  scrollbar-base-color: transparent;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  &::placeholder {
+    font-weight: 400;
+    color: rgb(189, 189, 189);
+  }
+
+  line-height: 1.2;
+
+  &:focus {
+    outline: none;
+    border: 1px solid rgb(19, 26, 92);
+  }
+}
+
+.commentSendBth {
+  cursor: pointer;
+  background: rgb(110, 116, 161);
+  border-radius: 6px;
+  color: white;
+
+  border: none;
+  display: flex;
+  margin-top: 20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  transition: background 250ms linear;
+  &:hover {
+    background-color: rgb(255, 118, 118);
+  }
+
+  align-items: center;
+  justify-content: center;
+}
+
+.sideBarBox {
+  flex: 0 0 260px;
+
+  min-height: 240px;
+  height: 100%;
+}
+.listBackButton {
+  font-size: 33px;
+  height: 40px;
+  width: 33px;
+
+  color: rgb(255, 130, 130);
+  transition: color 250ms linear, padding-left 250ms linear;
+  padding-left: 20px;
+  &:hover {
+    color: gray;
+    padding-left: 0px;
+  }
+}
+.messageOtherUser {
+  font-size: 30px;
+  text-align: center;
+  margin: 40px;
+  color: black;
+  margin-top: 40px;
+}

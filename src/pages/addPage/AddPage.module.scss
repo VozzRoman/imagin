@@ -1,0 +1,172 @@
+.pageContainer {
+  padding: 30px 0;
+  flex-grow: 1;
+}
+
+.formPageBody {
+  width: 100%;
+  position: relative;
+  padding: 40px;
+  min-height: auto;
+  height: 100%;
+  border-radius: 6px;
+  background-color: white;
+  margin-left: 30px;
+}
+
+.labelAddPage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: black;
+
+  font-weight: 600;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+//Add imge input------
+.textLabelimputImage {
+  display: block;
+  margin-bottom: 10px;
+  color: black;
+  font-weight: 600;
+}
+.labelForAddImge {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid rgb(199, 199, 199);
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  transition: background-color 250ms linear;
+  background-color: rgb(110, 116, 161);
+  &:hover {
+    background-color: rgb(30, 36, 80);
+  }
+  height: auto;
+}
+.inputAddPageImage {
+  margin-top: 20px;
+  visibility: hidden;
+}
+.labelIMAGE {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(244, 177, 177);
+  font-weight: 600;
+}
+
+//----image body
+.imageBody {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 6px;
+
+  overflow: hidden;
+
+  img {
+    max-width: 100%;
+    display: block;
+    text-align: center;
+    height: 710px;
+    object-fit: cover;
+  }
+}
+.errorMessage {
+  text-align: center;
+  color: rgb(221, 42, 42);
+  margin-bottom: 20px;
+}
+
+.inputAddPageTitle {
+  box-sizing: border-box;
+  width: 100%;
+  height: 35px;
+  background-color: transparent;
+  border: none;
+  padding-left: 20px;
+  border-bottom: 1px solid rgb(187, 187, 187);
+  margin-bottom: 20px;
+  font-family: "Raleway", sans-serif;
+  &::placeholder {
+    color: rgb(225, 225, 225);
+  }
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(30, 36, 80);
+  }
+}
+
+.inputAddPageText {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+  resize: none;
+  height: 80px;
+  background-color: transparent;
+  padding-left: 20px;
+  border: 1px solid rgb(187, 187, 187);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  line-height: 1.2;
+  font-family: "Raleway", sans-serif;
+  color: black;
+  padding-right: 20px;
+  &::placeholder {
+    color: rgb(225, 225, 225);
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid rgb(30, 36, 80);
+  }
+}
+
+.sendControllers {
+  display: flex;
+  justify-content: space-between;
+}
+.buttonsAddPage {
+  cursor: pointer;
+  height: 35px;
+  width: 150px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  font-weight: inherit;
+  font-family: "Raleway", sans-serif;
+  background-color: rgb(110, 116, 161);
+  color: white;
+  transition: background-color 250ms linear, color 250ms linear;
+  &:disabled {
+    background-color: rgb(211, 216, 255);
+  }
+  &:not(:disabled):hover {
+    background-color: rgb(30, 36, 80);
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid rgb(30, 36, 80);
+  }
+}
+.wornMessage {
+  margin: 10px;
+  text-align: center;
+  color: rgb(255, 130, 130);
+}
+.sideBarBox {
+  flex: 0 0 260px;
+
+  min-height: 240px;
+  height: 100%;
+}

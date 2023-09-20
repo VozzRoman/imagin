@@ -1,0 +1,64 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background: rgb(110, 116, 161);
+  box-shadow: 1px 1px 4px -2px rgb(87, 87, 87);
+}
+.headerBoady {
+  display: flex;
+  //   padding: 20px 0;
+  width: 100%;
+  padding-left: 150px;
+  //   align-items: baseline;
+  z-index: 100;
+}
+.navButton {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+
+  margin-left: 20px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-family: inherit;
+  text-decoration: none;
+  transition: color 250ms linear;
+  font-weight: 400;
+  &:hover {
+    color: rgb(136, 158, 255);
+  }
+  span {
+    font-size: 14px;
+  }
+}
+.main {
+  flex-grow: 1;
+  padding: 40px 0;
+}
+
+.footer {
+  background: rgb(110, 116, 161);
+  padding: 20px 0;
+}
+.profileControls {
+  margin-left: auto;
+}
+.iconProfile {
+  font-size: 22px;
+  color: white;
+  transition: color 250ms linear;
+  &:hover {
+    color: rgb(110, 116, 161);
+  }
+}
+.profileBth {
+  background: rgb(255, 118, 118);
+  padding: 7px;
+  border-radius: 50%;
+}

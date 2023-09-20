@@ -1,0 +1,53 @@
+.userInfoList {
+  position: relative;
+  z-index: 1;
+  margin-top: 100px;
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userInfoItem {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 40px;
+  max-width: 500px;
+  white-space: nowrap;
+  width: 100%;
+  background-color: white;
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  span {
+    margin-left: 10px;
+    color: rgb(255, 130, 130);
+    max-width: 150px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  a {
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 600;
+    text-overflow: ellipsis;
+  }
+}
+
+.userInfoBar {
+  flex: 0 0 23px;
+  color: rgb(255, 130, 130);
+  font-size: 23px;
+  margin-right: 10px;
+  padding: 7px;
+  background-color: rgb(241, 241, 241);
+  border-radius: 50%;
+}

@@ -1,0 +1,70 @@
+//-----info Author
+.avaBody {
+  display: flex;
+  align-items: center;
+}
+.imageBodyAvatar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(110, 116, 161);
+  margin-right: 20px;
+  overflow: hidden;
+  border: 1px solid gray;
+  z-index: 0;
+}
+.imageAvaPic {
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  object-fit: cover !important;
+  z-index: 100;
+}
+.authorNameText {
+  text-decoration: none;
+  display: flex;
+  position: relative;
+
+  font-weight: 600;
+  z-index: 0;
+}
+.avatarShortName {
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+}
+
+.closeButton {
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  border: transparent;
+  border-radius: 50%;
+  color: white;
+  background-color: gray;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 40px;
+  transition: background-color 250ms linear;
+  &:hover {
+    background-color: rgb(41, 41, 41);
+  }
+}
+
+.closeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: auto;
+}

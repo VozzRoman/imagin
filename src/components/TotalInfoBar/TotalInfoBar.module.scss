@@ -1,0 +1,58 @@
+.totalUsers {
+  width: 100%;
+
+  margin-top: 20px;
+
+  p {
+    color: black;
+  }
+  span {
+    color: rgb(89, 114, 183);
+    font-weight: 600;
+    font-size: 19px;
+  }
+}
+.totalAvaInfo {
+  margin-top: 20px;
+}
+.totalPosts {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 40px;
+  background: white;
+
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+
+  text-align: center;
+  span {
+    color: rgb(255, 130, 130);
+    margin-left: 10px;
+    font-size: 15px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.totalInfoIcons {
+  color: rgb(255, 130, 130);
+  font-size: 20px;
+  margin-right: 10px;
+  padding: 7px;
+  background-color: rgb(241, 241, 241);
+  border-radius: 50%;
+}
+.totalLink {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  border-bottom: 1px solid black;
+  transition: color 250ms linear, border-bottom 250ms linear;
+  &:hover {
+    color: gray;
+    border-bottom: 1px solid gray;
+  }
+}

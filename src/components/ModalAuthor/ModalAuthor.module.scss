@@ -1,0 +1,47 @@
+//Ava card popular--------
+.avaBody {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.avaBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(192, 192, 192);
+  overflow: hidden;
+  border: 1px solid white;
+  margin-bottom: auto;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.avaName {
+  position: relative;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 24px;
+  max-width: 90px;
+  justify-content: center;
+  border-radius: 4px;
+  margin: 10px;
+  display: flex;
+  padding: 5px;
+  background: rgb(66, 66, 66);
+  align-items: center;
+}
+.avatarShortName {
+  font-weight: 600;
+  font-size: 29px;
+}
+.galleryAuthor {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: white;
+  height: 100vh;
+}

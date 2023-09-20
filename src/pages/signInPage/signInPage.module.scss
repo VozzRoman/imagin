@@ -1,0 +1,108 @@
+.formBody {
+  max-width: 460px;
+  background-color: hsl(0, 0%, 100%, 0.1);
+  border-radius: 6px;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 1px 2px 15px 1px hsl(0, 0%, 0%, 0.3);
+  border: 1px solid rgb(30, 36, 80, 0.5);
+  text-align: center;
+}
+.form {
+  margin-bottom: 40px;
+}
+.formTitle {
+  font-size: 40px;
+  margin-bottom: 60px;
+  font-weight: 400;
+}
+.fromLabel {
+  position: relative;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.formInput {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 5px;
+  height: 35px;
+  padding-left: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  transition: border-bottom 250ms linear;
+  color: rgb(30, 36, 80);
+  &::placeholder {
+    color: rgb(110, 116, 161);
+  }
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(30, 36, 80);
+  }
+}
+.formButton {
+  cursor: pointer;
+  color: rgb(92, 92, 100);
+  width: 100%;
+  height: 35px;
+  margin-top: 40px;
+  border-radius: 6px;
+  border: none;
+  background-color: white;
+
+  transition: background-color 250ms linear, color 250ms linear;
+  &:focus {
+    outline: none;
+    border: 1px solid rgb(30, 36, 80);
+  }
+  &:disabled {
+    background-color: hsl(0, 0%, 100%, 0.5);
+  }
+  &:not(:disabled):hover {
+    background-color: rgb(30, 36, 80);
+    color: white;
+  }
+}
+
+.formSignUpLink {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 17px;
+
+  margin: 0 auto;
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(255, 255, 255);
+  transition: color 250ms linear, border-bottom 250ms linear,
+    font-weight 250ms linear;
+  &:hover {
+    color: rgb(30, 36, 80);
+    border-bottom: 1px solid rgb(6, 7, 18);
+    font-weight: 600;
+  }
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(30, 36, 80);
+  }
+}
+.errorMessage {
+  text-align: center;
+  color: rgb(255, 216, 216);
+  margin-top: 20px;
+}
+.showHideIcon {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  right: 0;
+  transform: translateX(-50%);
+  font-size: 25px;
+  transition: color 250ms linear;
+  &:hover {
+    color: rgb(30, 36, 80);
+  }
+}
