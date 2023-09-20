@@ -71,8 +71,20 @@
 }
 
 .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background: rgb(110, 116, 161);
-  padding: 20px 0;
+  @media screen and (min-width: 1181px) {
+    position: static;
+    padding: 20px 0;
+  }
+}
+.footerTitle {
+  display: none;
+  @media screen and (min-width: 1181px) {
+    display: block;
+  }
 }
 .profileControls {
   margin-left: auto;

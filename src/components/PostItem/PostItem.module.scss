@@ -133,7 +133,10 @@
 }
 .postPagePost {
   flex: 0 1 100%;
-  margin-left: 40px;
+
+  @media screen and (min-width: 1181px) {
+    margin-left: 40px;
+  }
 }
 .postPageCommentsBox {
   flex: 0 1 100%;
@@ -211,10 +214,13 @@
 }
 
 .sideBarBox {
-  flex: 0 0 260px;
-
-  min-height: 240px;
-  height: 100%;
+  display: none;
+  @media screen and (min-width: 1181px) {
+    flex: 0 0 260px;
+    display: block;
+    min-height: 240px;
+    height: 100%;
+  }
 }
 .listBackButton {
   font-size: 33px;

@@ -1,0 +1,46 @@
+.navList {
+  display: none;
+  @media screen and (max-width: 1181px) {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.navItem {
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+.navLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: color 250ms linear;
+  font-weight: 400;
+
+  &:hover {
+    color: rgb(136, 158, 255);
+    .navBthIcon {
+      font-size: 25px;
+    }
+  }
+  span {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+.testOval {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgb(126, 134, 189);
+  margin-right: 6px;
+}
+.navBthIcon {
+  transition: font-size 200ms linear;
+}

@@ -19,6 +19,7 @@ import { LiaSignInAltSolid, LiaSignOutAltSolid } from "react-icons/lia";
 // import { useEffect } from "react";
 import Headroom from "react-headroom";
 import { Burger } from "../Burger/Burger";
+import FooterNav from "../FooterNav/FooterNav";
 
 const activeStyles = {
   color: "rgb(110, 116, 161)",
@@ -111,7 +112,10 @@ const Layout = () => {
         <Container>
           {" "}
           <div className={scss.container}>
-            <span>Imaginarium</span> 2023
+            <div className={scss.footerTitle}>
+              <span>Imaginarium</span> 2023
+            </div>
+            <FooterNav />
           </div>
         </Container>
       </footer>
