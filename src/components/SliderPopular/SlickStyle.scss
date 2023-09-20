@@ -23,55 +23,61 @@
 // }
 
 //Controlls
+
 .slick-arrow {
-  cursor: pointer;
-  background: rgb(89, 89, 89);
-  color: transparent;
+  display: none !important;
+  @media screen and (min-width: 1181px) {
+    display: block !important;
+    cursor: pointer;
+    background: rgb(89, 89, 89);
+    color: transparent;
 
-  border: none;
-  width: 20px;
-  height: 2px;
-  position: absolute;
-  top: 50%;
-
-  &.slick-next {
-    right: -12px !important;
-    width: 10px;
+    border: none;
+    width: 20px;
     height: 2px;
-    transform: rotate(50deg);
-    background-color: rgb(255, 130, 130);
+    position: absolute;
+    top: 50%;
 
-    &::after {
-      content: "";
-      position: absolute;
-      transform: rotate(90deg);
-      top: 5px;
-      left: 6px;
+    &.slick-next {
+      right: -12px !important;
       width: 10px;
       height: 2px;
+      transform: rotate(50deg);
       background-color: rgb(255, 130, 130);
-    }
-  }
-  &.slick-prev {
-    left: -12px !important;
-    width: 10px;
-    height: 2px;
-    transform: rotate(230deg);
-    background-color: rgb(255, 130, 130);
 
-    &::after {
-      content: "";
-      position: absolute;
-      transform: rotate(90deg);
-      top: 5px;
-      left: 6px;
+      &::after {
+        content: "";
+        position: absolute;
+        transform: rotate(90deg);
+        top: 5px;
+        left: 6px;
+        width: 10px;
+        height: 2px;
+        background-color: rgb(255, 130, 130);
+      }
+    }
+    &.slick-prev {
+      left: -12px !important;
       width: 10px;
       height: 2px;
+      transform: rotate(230deg);
       background-color: rgb(255, 130, 130);
+
+      &::after {
+        content: "";
+        position: absolute;
+        transform: rotate(90deg);
+        top: 5px;
+        left: 6px;
+        width: 10px;
+        height: 2px;
+        background-color: rgb(255, 130, 130);
+      }
     }
+    z-index: 0 !important;
   }
-  z-index: 0 !important;
 }
+
 .slick-dots {
   display: none !important;
 }

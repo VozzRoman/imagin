@@ -31,22 +31,9 @@ const UserInfoPage = () => {
           <SideBar />
           <TotalInfoBar />
         </div>
-        <div
-          style={{
-            marginLeft: "30px",
-            width: "100%",
-            position: "relative",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className={scss.userInfoBody}>
           <Users userData={user} />
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row-reverse",
-              justifyContent: "space-between",
-            }}
-          >
+          <div className={scss.userInfoBox}>
             <UsersInfoBar userData={user} />
             <Link className={scss.listBackButton} to={location.state.from}>
               <MdOutlineKeyboardBackspace />{" "}

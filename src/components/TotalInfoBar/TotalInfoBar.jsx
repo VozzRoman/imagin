@@ -18,7 +18,7 @@ const activeStyles = {
   borderBottom: "1px solid gray",
 };
 
-const TotalInfoBar = () => {
+const TotalInfoBar = ({ toggle }) => {
   const [awards, setAwards] = useState(0);
   const [awardsImage, setAwardImage] = useState("");
 
@@ -57,6 +57,7 @@ const TotalInfoBar = () => {
       <li className={scss.totalPosts}>
         <BsFilePost className={scss.totalInfoIcons} />
         <NavLink
+          onClick={toggle}
           style={({ isActive }) => (isActive ? activeStyles : undefined)}
           className={scss.totalLink}
           to="/posts"
@@ -68,6 +69,7 @@ const TotalInfoBar = () => {
       <li className={scss.totalPosts}>
         <FaUserAlt className={scss.totalInfoIcons} />
         <NavLink
+          onClick={toggle}
           style={({ isActive }) => (isActive ? activeStyles : undefined)}
           className={scss.totalLink}
           to="/users"

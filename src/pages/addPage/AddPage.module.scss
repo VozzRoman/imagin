@@ -11,7 +11,10 @@
   height: 100%;
   border-radius: 6px;
   background-color: white;
-  margin-left: 30px;
+
+  @media screen and (min-width: 1181px) {
+    margin-left: 30px;
+  }
 }
 
 .labelAddPage {
@@ -132,13 +135,15 @@
 }
 
 .sendControllers {
-  display: flex;
-  justify-content: space-between;
+  @media screen and (min-width: 441px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .buttonsAddPage {
   cursor: pointer;
   height: 35px;
-  width: 150px;
+  width: 100%;
   border-radius: 6px;
   border: none;
   font-size: 14px;
@@ -146,6 +151,9 @@
   font-family: "Raleway", sans-serif;
   background-color: rgb(110, 116, 161);
   color: white;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
   transition: background-color 250ms linear, color 250ms linear;
   &:disabled {
     background-color: rgb(211, 216, 255);
@@ -158,6 +166,12 @@
     outline: none;
     border: 1px solid rgb(30, 36, 80);
   }
+  @media screen and (min-width: 441px) {
+    width: 150px;
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+  }
 }
 .wornMessage {
   margin: 10px;
@@ -165,8 +179,11 @@
   color: rgb(255, 130, 130);
 }
 .sideBarBox {
-  flex: 0 0 260px;
-
-  min-height: 240px;
-  height: 100%;
+  display: none;
+  @media screen and (min-width: 1181px) {
+    flex: 0 0 260px;
+    display: block;
+    min-height: 240px;
+    height: 100%;
+  }
 }

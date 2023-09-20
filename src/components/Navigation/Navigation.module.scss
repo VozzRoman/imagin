@@ -1,5 +1,8 @@
 .navList {
-  display: flex;
+  display: none;
+  @media screen and (min-width: 1181px) {
+    display: flex;
+  }
 }
 .navItem {
   &:not(:last-child) {

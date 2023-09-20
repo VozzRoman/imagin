@@ -1,12 +1,18 @@
 .sideBarBox {
-  flex: 0 0 260px;
+  display: none;
+  @media screen and (min-width: 1181px) {
+    display: block;
+    flex: 0 0 260px;
 
-  min-height: 240px;
-  height: 100%;
+    min-height: 240px;
+    height: 100%;
+  }
 }
 .allUsersContainer {
-  padding-left: 30px;
   width: 100%;
+  @media screen and (min-width: 1181px) {
+    padding-left: 30px;
+  }
 }
 .allUserItem {
   display: flex;
@@ -58,7 +64,8 @@
   outline: none;
   font-size: 14px;
 
-  width: 40px;
+  flex: 0 0 40px;
+  margin-left: 15px;
   height: 40px;
   transition: background-color 250ms linear;
   &:hover {

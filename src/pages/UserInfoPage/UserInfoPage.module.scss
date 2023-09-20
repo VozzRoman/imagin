@@ -1,20 +1,38 @@
 .sideBarBox {
-  flex: 0 0 260px;
-
-  min-height: 240px;
-  height: 100%;
+  display: none;
+  @media screen and (min-width: 1181px) {
+    flex: 0 0 260px;
+    display: block;
+    min-height: 240px;
+    height: 100%;
+  }
 }
 .listBackButton {
-  margin-top: 100px;
   font-size: 33px;
   height: 40px;
   width: 33px;
-
+  margin-top: 100px;
   color: rgb(255, 130, 130);
   transition: color 250ms linear, padding-left 250ms linear;
   padding-left: 20px;
   &:hover {
     color: gray;
     padding-left: 0px;
+  }
+}
+.userInfoBody {
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+  @media screen and (min-width: 1181px) {
+    margin-left: 30px;
+  }
+}
+.userInfoBox {
+  display: flex;
+  flex-direction: column-reverse;
+  @media screen and (min-width: 441px) {
+    justify-content: space-between;
+    flex-direction: row-reverse;
   }
 }

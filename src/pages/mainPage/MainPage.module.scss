@@ -26,9 +26,11 @@
   flex: 0 1 100%;
   height: 100%;
   border-radius: 6px;
-  margin-left: 30px;
 
   min-width: 0; //для  слайдера
+  @media screen and (min-width: 1181px) {
+    margin-left: 30px;
+  }
 }
 .sliderContainer {
   position: relative;
@@ -43,10 +45,14 @@
   height: auto;
 }
 .sideBarBox {
-  flex: 0 0 260px;
+  display: none;
+  @media screen and (min-width: 1181px) {
+    display: block;
+    flex: 0 0 260px;
 
-  min-height: 240px;
-  height: 100%;
+    min-height: 240px;
+    height: 100%;
+  }
 }
 
 .totalUsers {

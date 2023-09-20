@@ -30,6 +30,7 @@
   padding-right: 45px;
   background-color: transparent;
   border: none;
+  font-size: 16px;
   border-bottom: 1px solid white;
   transition: border-bottom 250ms linear;
   color: rgb(30, 36, 80);
@@ -39,6 +40,9 @@
   &:focus {
     outline: none;
     border-bottom: 1px solid rgb(30, 36, 80);
+  }
+  @media screen and (min-width: 1181px) {
+    font-size: 14px;
   }
 }
 .formButton {
@@ -51,7 +55,7 @@
   border-radius: 6px;
   border: none;
   background-color: white;
-
+  font-size: inherit;
   transition: background-color 250ms linear, color 250ms linear;
   &:focus {
     outline: none;

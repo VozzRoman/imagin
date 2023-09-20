@@ -6,6 +6,7 @@ import { getErrorIn, getIsLoading } from "../../redux/auth/selectors";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useState } from "react";
 import { ThreeDots } from "react-loader-spinner";
+import Container from "../../components/Container/Container";
 
 const SignInPage = () => {
   const dispatch = useDispatch();
@@ -42,55 +43,58 @@ const SignInPage = () => {
   };
 
   return (
-    <div className={scss.formBody}>
-      <h1 className={scss.formTitle}>Реєстрація</h1>
-      <form onSubmit={handleSubmit} autoComplete="off" className={scss.form}>
-        <label className={scss.fromLabel}>
-          Пошта
-          <input
-            className={scss.formInput}
-            type="text"
-          
-            name="email"
-            placeholder="email"
-          />
-        </label>
-        <label className={scss.fromLabel} style={{ marginBottom: "0px" }}>
-          Пароль
-          <input
-            className={scss.formInput}
-            type={typeInput}
-           
-            name="password"
-            placeholder="password"
-          />
-          <span className={scss.showHideIcon} onClick={handleShowHidePaswword}>
-            {icon}
-          </span>
-        </label>
+    <Container>
+      <div className={scss.formBody}>
+        <h1 className={scss.formTitle}>Реєстрація</h1>
+        <form onSubmit={handleSubmit} autoComplete="off" className={scss.form}>
+          <label className={scss.fromLabel}>
+            Пошта
+            <input
+              className={scss.formInput}
+              type="text"
+              name="email"
+              placeholder="email"
+            />
+          </label>
+          <label className={scss.fromLabel} style={{ marginBottom: "0px" }}>
+            Пароль
+            <input
+              className={scss.formInput}
+              type={typeInput}
+              name="password"
+              placeholder="password"
+            />
+            <span
+              className={scss.showHideIcon}
+              onClick={handleShowHidePaswword}
+            >
+              {icon}
+            </span>
+          </label>
 
-        {error && <p className={scss.errorMessage}>{error}</p>}
-        {!isLoading ? (
-          <button type="submit" className={scss.formButton}>
-            зареєструватися
-          </button>
-        ) : (
-          <ThreeDots
-            height="40"
-            width="40"
-            radius="9"
-            color="#ffffff"
-            ariaLabel="three-dots-loading"
-            wrapperStyle={{ marginTop: "15px", justifyContent: "center" }}
-            wrapperClassName=""
-            visible={true}
-          />
-        )}
-      </form>
-      <Link className={scss.formSignUpLink} to="/signup">
-        В мене ще немае акаунта
-      </Link>
-    </div>
+          {error && <p className={scss.errorMessage}>{error}</p>}
+          {!isLoading ? (
+            <button type="submit" className={scss.formButton}>
+              зареєструватися
+            </button>
+          ) : (
+            <ThreeDots
+              height="40"
+              width="40"
+              radius="9"
+              color="#ffffff"
+              ariaLabel="three-dots-loading"
+              wrapperStyle={{ marginTop: "15px", justifyContent: "center" }}
+              wrapperClassName=""
+              visible={true}
+            />
+          )}
+        </form>
+        <Link className={scss.formSignUpLink} to="/signup">
+          В мене ще немае акаунта
+        </Link>
+      </div>
+    </Container>
   );
 };
 

@@ -18,7 +18,7 @@ const SliderPopular = () => {
     arrows: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 2,
     slidesToScroll: 2,
     swipeToSlide: true,
   };

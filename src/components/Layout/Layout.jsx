@@ -14,8 +14,11 @@ import Container from "../Container/Container";
 import Logo from "../Logo/Logo";
 import { FaUserAlt } from "react-icons/fa";
 import { MdLogout } from "react-icons/md";
+import { LiaSignInAltSolid, LiaSignOutAltSolid } from "react-icons/lia";
+
 // import { useEffect } from "react";
 import Headroom from "react-headroom";
+import { Burger } from "../Burger/Burger";
 
 const activeStyles = {
   color: "rgb(110, 116, 161)",
@@ -54,7 +57,7 @@ const Layout = () => {
               }}
             >
               <Logo />
-
+              {loggedUser && <Burger />}
               <div className={scss.headerBoady}>
                 {loggedUser && <Navigation />}
                 <div className={scss.profileControls}>
@@ -73,6 +76,7 @@ const Layout = () => {
                         <MdLogout />
                         <span> Вихід</span>
                       </button>
+                      <LiaSignOutAltSolid className={scss.logOut} />
                     </div>
                   ) : (
                     <Link
@@ -82,7 +86,8 @@ const Layout = () => {
                       }}
                       to="signin"
                     >
-                      Вже маю акаунт
+                      <p>Вже маю акаунт</p>
+                      <LiaSignInAltSolid className={scss.sigInIcon} />
                     </Link>
                   )}
                 </div>

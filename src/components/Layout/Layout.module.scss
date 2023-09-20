@@ -12,9 +12,12 @@
   display: flex;
   //   padding: 20px 0;
   width: 100%;
-  padding-left: 150px;
+  padding-left: 70px;
   //   align-items: baseline;
   z-index: 100;
+  @media screen and (min-width: 1181px) {
+    padding-left: 150px;
+  }
 }
 .navButton {
   cursor: pointer;
@@ -33,8 +36,33 @@
   &:hover {
     color: rgb(136, 158, 255);
   }
-  span {
-    font-size: 14px;
+  //   span {
+  //     font-size: 14px;
+  //   }
+  display: none;
+  p {
+    display: none;
+    @media screen and (min-width: 1181px) {
+      display: block;
+    }
+  }
+  @media screen and (min-width: 1181px) {
+    display: block;
+  }
+}
+.sigInIcon {
+  display: block;
+  font-size: 40px;
+  @media screen and (min-width: 1181px) {
+    display: none;
+  }
+}
+.logOut {
+  display: block;
+  font-size: 40px;
+  margin-left: 20px;
+  @media screen and (min-width: 1181px) {
+    display: none;
   }
 }
 .main {
