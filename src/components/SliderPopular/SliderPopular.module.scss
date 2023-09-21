@@ -3,11 +3,23 @@
   margin: 0 -15px;
 }
 .slideItem {
-  //   flex: 0 1 25%;
   cursor: pointer;
-  height: 250px;
+  flex: 0 0 30%;
+  //   height: 350px;
+  margin-right: 10px;
   overflow: hidden;
-  border-radius: 6px;
+  @media screen and (min-width: 848px) {
+    flex: 0 0 23%;
+    //  height: 350px;
+  }
+
+  @media screen and (min-width: 1181px) {
+    flex: 0 0 165px;
+    margin-right: 10px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 6px;
+  }
 }
 .sliderHolder {
   background: white;
@@ -19,5 +31,14 @@
   h3 {
     font-size: 25px;
     color: rgb(142, 142, 142);
+  }
+}
+.slideList {
+  display: flex;
+  overflow: scroll;
+  height: 100%;
+
+  @media screen and (min-width: 1181px) {
+    height: auto;
   }
 }

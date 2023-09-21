@@ -8,15 +8,14 @@ import {
 } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
 import { useDispatch, useSelector } from "react-redux";
-import { getToken } from "../../redux/auth/selectors";
+import { getToken, getUser } from "../../redux/auth/selectors";
 import { logout } from "../../redux/auth/operations";
 import Container from "../Container/Container";
 import Logo from "../Logo/Logo";
 import { FaUserAlt } from "react-icons/fa";
-import { MdLogout } from "react-icons/md";
-import { LiaSignInAltSolid, LiaSignOutAltSolid } from "react-icons/lia";
 
-// import { useEffect } from "react";
+import { LiaSignInAltSolid } from "react-icons/lia";
+
 import Headroom from "react-headroom";
 import { Burger } from "../Burger/Burger";
 import FooterNav from "../FooterNav/FooterNav";
@@ -24,7 +23,6 @@ import FooterNav from "../FooterNav/FooterNav";
 const activeStyles = {
   color: "rgb(110, 116, 161)",
   fontWeight: "600",
-  //  borderBottom: "2px solid rgb(255, 159, 159)",
 };
 const firstBackGround = {
   background: "rgb(132, 147, 190)",
@@ -35,7 +33,7 @@ const secondBackGround = {
 
 const Layout = () => {
   const loggedUser = useSelector(getToken);
-
+  const authUser = useSelector(getUser);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { pathname } = useLocation();
@@ -46,7 +44,7 @@ const Layout = () => {
 
   return (
     <div className={scss.wrapper}>
-      <Headroom>
+      <Headroom style={{ zIndex: "1000" }}>
         <header className={scss.header}>
           <Container>
             <div
@@ -72,12 +70,23 @@ const Layout = () => {
                         to="profile"
                       >
                         <FaUserAlt className={scss.profileBth} />
+                        <div className={scss.avaBoxMobile}>
+                          {authUser.avatar ? (
+                            <img src={authUser?.avatar} alt="" />
+                          ) : (
+                            <p>{authUser.name.slice(0, 1).toUpperCase()}</p>
+                          )}
+                        </div>
                       </NavLink>
                       <button onClick={handleLogut} className={scss.navButton}>
-                        <MdLogout />
                         <span> Вихід</span>
                       </button>
-                      <LiaSignOutAltSolid className={scss.logOut} />
+                      {/* <button
+                        onClick={handleLogut}
+                        className={scss.navButtonMobile}
+                      >
+                        <LiaSignOutAltSolid className={scss.logOut} />
+                      </button> */}
                     </div>
                   ) : (
                     <Link
@@ -112,10 +121,15 @@ const Layout = () => {
         <Container>
           {" "}
           <div className={scss.container}>
+            {!loggedUser && (
+              <div className={scss.footerTitleMobile}>
+                <span>Imaginarium</span> 2023
+              </div>
+            )}
             <div className={scss.footerTitle}>
               <span>Imaginarium</span> 2023
             </div>
-            <FooterNav />
+            {loggedUser && <FooterNav />}
           </div>
         </Container>
       </footer>

@@ -3,9 +3,18 @@ import { BiUserCircle } from "react-icons/bi";
 import { MdOutlineMailOutline } from "react-icons/md";
 import scss from "../UsersInfoBar/UsersInfoBar.module.scss";
 import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logout } from "../../redux/auth/operations";
 const UsersInfoBar = ({ userData }) => {
   const [awards, setAwards] = useState(0);
   const [awardsImage, setAwardImage] = useState("");
+  const { pathname } = useLocation();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleLogut = () => {
+    dispatch(logout()).then(navigate("/signin"));
+  };
   useEffect(() => {
     const awardsCount = userData?.posts?.length;
     setAwards(awardsCount);
@@ -48,6 +57,12 @@ const UsersInfoBar = ({ userData }) => {
         Cтатус:{" "}
         <span style={{ color: "rgb(255, 130, 130)" }}> {awardsImage}</span>
       </li>
+
+      {pathname === "/profile" && (
+        <button onClick={handleLogut} className={scss.logoutMobile}>
+          Вийти
+        </button>
+      )}
     </ul>
   );
 };

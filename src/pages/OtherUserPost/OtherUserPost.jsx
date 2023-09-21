@@ -58,7 +58,7 @@ const OtherUserPost = () => {
       </Link>
       {posts.length > 0 && <Users userData={filterAuthor(posts[0]?.author)} />}
       {posts.length > 0 ? (
-        <div style={{ marginTop: "100px" }}>
+        <div style={{ marginTop: "100px", paddingBottom: "40px" }}>
           {posts?.map((item) => {
             return (
               <li key={item._id} className={scss.postBody}>

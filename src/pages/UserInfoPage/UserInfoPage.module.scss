@@ -31,6 +31,7 @@
 .userInfoBox {
   display: flex;
   flex-direction: column-reverse;
+  padding-bottom: 40px;
   @media screen and (min-width: 441px) {
     justify-content: space-between;
     flex-direction: row-reverse;

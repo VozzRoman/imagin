@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
+
 import Layout from "./components/Layout/Layout";
 import MainPage from "./pages/mainPage/MainPage";
 import AddPage from "./pages/addPage/AddPage";
@@ -9,12 +9,7 @@ import SignInPage from "./pages/signInPage/SignInPage";
 import EditPage from "./pages/editPage/EditPage";
 import PostPage from "./pages/postPage/PostPage";
 import { useDispatch, useSelector } from "react-redux";
-// import {
-//   getAuth,
-//   getError,
-//   getIsLoading,
-//   getUser,
-// } from "./redux/auth/selectors";
+
 import { useEffect } from "react";
 import { current } from "./redux/auth/operations";
 import Profile from "./pages/Profile/Profile";

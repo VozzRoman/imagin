@@ -1,4 +1,3 @@
-import Slider from "react-slick";
 import "../SliderPopular/SlickStyle.scss";
 
 import { useSelector } from "react-redux";
@@ -13,15 +12,6 @@ import AuthorSlider from "../AuthorSlider/AuthorSlider";
 const SliderPopular = () => {
   const [isOpenAndImageId, setIsOpenAndImageId] = useState("");
   const [postId, setPostId] = useState("");
-
-  const settings = {
-    arrows: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    swipeToSlide: true,
-  };
 
   const handlerIsOpen = (item) => {
     setIsOpenAndImageId(item.imgUrl);
@@ -39,7 +29,7 @@ const SliderPopular = () => {
   return (
     <>
       {popularPosts.length === 6 ? (
-        <Slider {...settings}>
+        <ul className={scss.slideList}>
           {popularPosts?.map((item) => {
             return (
               <li
@@ -54,7 +44,7 @@ const SliderPopular = () => {
               </li>
             );
           })}
-        </Slider>
+        </ul>
       ) : (
         <div className={scss.sliderHolder}>
           <h3>Треба більше постів</h3>

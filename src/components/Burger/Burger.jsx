@@ -32,6 +32,17 @@ export const Burger = () => {
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
+  const handleToggle = () => {
+    console.log(isOpen);
+    toggleOpen();
+    if (isOpen === false) {
+      document.body.style.overflow = "hidden";
+    }
+    if (isOpen === true) {
+      document.body.style.overflow = "auto";
+    }
+  };
+
   return (
     <motion.nav
       className={scss.nav}
@@ -43,12 +54,13 @@ export const Burger = () => {
       <motion.div className={scss.background} variants={sidebar}>
         <div style={{ marginTop: "75px", width: "260px" }}>
           <SideBar />
-          <TotalInfoBar toggle={() => toggleOpen()} />
+          <TotalInfoBar toggle={handleToggle} />
+
           <div className={scss.hideLayer}></div>
         </div>
       </motion.div>
 
-      <Toggle toggle={() => toggleOpen()} />
+      <Toggle toggle={handleToggle} />
     </motion.nav>
   );
 };

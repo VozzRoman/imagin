@@ -25,7 +25,7 @@ const PostsPage = () => {
 
   return (
     <Container>
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", paddingBottom: "40px" }}>
         <div className={scss.sideBarBox}>
           <SideBar />
           <TotalInfoBar />

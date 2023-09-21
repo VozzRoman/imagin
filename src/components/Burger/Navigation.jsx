@@ -1,6 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { MenuItem } from "./MenuItem";
+
 import scss from "./Burger.module.scss";
 
 const variants = {
@@ -13,11 +13,7 @@ const variants = {
 };
 
 export const Navigation = () => (
-  <motion.ul className={scss.NavList} variants={variants}>
-    {/* {itemIds.map((i) => (
-      <MenuItem i={i} key={i} />
-    ))} */}
-  </motion.ul>
+  <motion.ul className={scss.NavList} variants={variants}></motion.ul>
 );
 
 const itemIds = [0, 1, 2, 3, 4];
