@@ -2,7 +2,7 @@ import scss from "../../pages/allUsers/AllUsers.module.scss";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserPosts } from "../../redux/post/operations";
-import { VscChromeClose } from "react-icons/vsc";
+import { AiOutlineClose } from "react-icons/ai";
 
 import SideBar from "../../components/SideBar/SideBar";
 import Container from "../../components/Container/Container";
@@ -92,7 +92,7 @@ const AllUsers = () => {
           </ul>
           {hold !== 5 && (
             <button className={scss.closeAllUsers} onClick={closeAllUser}>
-              <VscChromeClose />
+              <AiOutlineClose />
             </button>
           )}
         </div>

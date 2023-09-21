@@ -81,12 +81,6 @@ const Layout = () => {
                       <button onClick={handleLogut} className={scss.navButton}>
                         <span> Вихід</span>
                       </button>
-                      {/* <button
-                        onClick={handleLogut}
-                        className={scss.navButtonMobile}
-                      >
-                        <LiaSignOutAltSolid className={scss.logOut} />
-                      </button> */}
                     </div>
                   ) : (
                     <Link

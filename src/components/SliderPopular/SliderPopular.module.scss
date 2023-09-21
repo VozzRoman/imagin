@@ -36,6 +36,8 @@
 .slideList {
   display: flex;
   overflow: scroll;
+  touch-action: auto;
+  -webkit-overflow-scrolling: touch;
   height: 100%;
 
   @media screen and (min-width: 1181px) {

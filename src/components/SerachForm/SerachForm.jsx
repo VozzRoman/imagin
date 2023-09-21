@@ -1,6 +1,6 @@
 import scss from "../SerachForm/SerachForm.module.scss";
 import { useState } from "react";
-import { RiSearch2Line } from "react-icons/ri";
+import { FaSearch } from "react-icons/fa";
 const SerachForm = ({ handleFilterUser }) => {
   const [name, setName] = useState("");
 
@@ -26,7 +26,7 @@ const SerachForm = ({ handleFilterUser }) => {
           value={name}
         />
         <button className={scss.formButton} type="submit">
-          <RiSearch2Line />
+          <FaSearch />
         </button>
       </form>
     </>
