@@ -3,7 +3,7 @@ import scss from "../../components/PostItem/PostItem.module.scss";
 import { useDispatch } from "react-redux";
 import { createComments } from "../../redux/comments/operations";
 import { useParams } from "react-router-dom";
-import { BsSend } from "react-icons/bs";
+import { AiOutlineSend } from "react-icons/ai";
 const MessgaeForm = () => {
   const [body, setBody] = useState("");
   const dispatch = useDispatch();
@@ -41,7 +41,7 @@ const MessgaeForm = () => {
           </label>
         </div>
         <button className={scss.commentSendBth}>
-          <BsSend />
+          <AiOutlineSend style={{ marginTop: "4px" }} />
         </button>
       </form>
 

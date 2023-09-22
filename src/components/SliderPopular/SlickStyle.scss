@@ -13,7 +13,7 @@
 //слайд
 .slick-slide {
   &:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 10px !important;
   }
 }
 //слайд актівний

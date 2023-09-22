@@ -22,6 +22,8 @@ import AllUsers from "./pages/allUsers/AllUsers";
 import UserInfoPage from "./pages/UserInfoPage/UserInfoPage";
 import { getAllUsers } from "./redux/users/operations";
 
+import Loadre from "./components/Loader/Loader";
+
 function App() {
   const dispatch = useDispatch();
   const fetchingUser = useSelector(getIsFetchUser);
@@ -33,7 +35,7 @@ function App() {
 
   return (
     <>
-      {!fetchingUser && (
+      {!fetchingUser ? (
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route
@@ -74,6 +76,8 @@ function App() {
             </Route>
           </Route>
         </Routes>
+      ) : (
+        <Loadre />
       )}
     </>
   );

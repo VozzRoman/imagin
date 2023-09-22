@@ -19,7 +19,7 @@
   }
 }
 .avatarName {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
   position: relative;
   z-index: 0;
@@ -28,6 +28,10 @@
   font-weight: 700;
   max-width: 220px;
   word-wrap: break-word;
+  @media screen and (min-width: 481px) {
+    font-size: 20px;
+    margin-top: 20px;
+  }
 }
 
 .sideBar {
@@ -37,7 +41,7 @@
   min-height: 240px;
   height: 100%;
   border-radius: 6px;
-  padding: 20px;
+  padding: 0 20px;
   overflow: hidden;
   img {
     position: absolute;
@@ -49,12 +53,15 @@
     object-fit: cover;
     border-bottom: 1px solid white;
   }
+  @media screen and (min-width: 481px) {
+    padding: 20px;
+  }
 }
 .avatarEmail {
   color: rgb(255, 130, 130);
   text-align: center;
   max-width: 220px;
-  margin: 20px 0;
+  margin: 10px 0px 0px 0px;
   font-size: 19px;
   font-weight: 600;
   display: block;
@@ -64,6 +71,9 @@
   text-overflow: ellipsis;
   &:hover {
     color: rgb(255, 73, 73);
+  }
+  @media screen and (min-width: 481px) {
+    margin: 20px 0;
   }
 }
 .awardsLable {

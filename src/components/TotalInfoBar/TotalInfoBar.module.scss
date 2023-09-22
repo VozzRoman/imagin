@@ -31,8 +31,11 @@
     margin-left: 10px;
     font-size: 15px;
   }
-  &:not(:last-child) {
-    margin-bottom: 20px;
+
+  @media screen and (min-width: 481px) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }
 

@@ -33,11 +33,12 @@ const secondBackGround = {
 
 const Layout = () => {
   const loggedUser = useSelector(getToken);
+
   const authUser = useSelector(getUser);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { pathname } = useLocation();
-
+  console.log(pathname);
   const handleLogut = () => {
     dispatch(logout()).then(navigate("/signin"));
   };
@@ -71,10 +72,10 @@ const Layout = () => {
                       >
                         <FaUserAlt className={scss.profileBth} />
                         <div className={scss.avaBoxMobile}>
-                          {authUser.avatar ? (
+                          {authUser?.avatar ? (
                             <img src={authUser?.avatar} alt="" />
                           ) : (
-                            <p>{authUser.name.slice(0, 1).toUpperCase()}</p>
+                            <p>{authUser?.name.slice(0, 1).toUpperCase()}</p>
                           )}
                         </div>
                       </NavLink>
@@ -111,7 +112,13 @@ const Layout = () => {
       >
         <Outlet />
       </main>
-      <footer className={scss.footer}>
+      <footer
+        className={scss.footer}
+        style={{
+          position:
+            (pathname === "/signup" || pathname === "/signin") && "static",
+        }}
+      >
         <Container>
           {" "}
           <div className={scss.container}>

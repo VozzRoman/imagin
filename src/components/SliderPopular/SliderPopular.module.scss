@@ -1,25 +1,5 @@
-.sliderBody {
-  display: flex;
-  margin: 0 -15px;
-}
 .slideItem {
   cursor: pointer;
-  flex: 0 0 30%;
-  //   height: 350px;
-  margin-right: 10px;
-  overflow: hidden;
-  @media screen and (min-width: 848px) {
-    flex: 0 0 23%;
-    //  height: 350px;
-  }
-
-  @media screen and (min-width: 1181px) {
-    flex: 0 0 165px;
-    margin-right: 10px;
-    height: 250px;
-    overflow: hidden;
-    border-radius: 6px;
-  }
 }
 .sliderHolder {
   background: white;
@@ -31,16 +11,5 @@
   h3 {
     font-size: 25px;
     color: rgb(142, 142, 142);
-  }
-}
-.slideList {
-  display: flex;
-  overflow: scroll;
-  touch-action: auto;
-  -webkit-overflow-scrolling: touch;
-  height: 100%;
-
-  @media screen and (min-width: 1181px) {
-    height: auto;
   }
 }

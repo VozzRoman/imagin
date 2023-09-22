@@ -8,10 +8,41 @@ import { memo, useState } from "react";
 import Modal from "../Modal/Modal";
 import { selectorGetAllUsers } from "../../redux/users/selectors";
 import AuthorSlider from "../AuthorSlider/AuthorSlider";
+import Slider from "react-slick";
 
 const SliderPopular = () => {
   const [isOpenAndImageId, setIsOpenAndImageId] = useState("");
   const [postId, setPostId] = useState("");
+  const settings = {
+    dots: false,
+    slidesToShow: 5,
+    infinite: false,
+    arrows: true,
+    freeMode: true,
+
+    responsive: [
+      {
+        breakpoint: 1181,
+        settings: {
+          slidesToShow: 4.2,
+          arrows: false,
+          freeMode: true,
+
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 786,
+        settings: {
+          slidesToShow: 3.2,
+          freeMode: true,
+          arrows: false,
+
+          dots: false,
+        },
+      },
+    ],
+  };
 
   const handlerIsOpen = (item) => {
     setIsOpenAndImageId(item.imgUrl);
@@ -28,8 +59,8 @@ const SliderPopular = () => {
 
   return (
     <>
-      {popularPosts.length === 6 ? (
-        <ul className={scss.slideList}>
+      {popularPosts.length >= 6 ? (
+        <Slider {...settings}>
           {popularPosts?.map((item) => {
             return (
               <li
@@ -44,7 +75,7 @@ const SliderPopular = () => {
               </li>
             );
           })}
-        </ul>
+        </Slider>
       ) : (
         <div className={scss.sliderHolder}>
           <h3>Треба більше постів</h3>

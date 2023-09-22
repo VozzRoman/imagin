@@ -4,8 +4,8 @@ const Loadre = () => {
   return (
     <div className={scss.spiner}>
       <Puff
-        height="80"
-        width="80"
+        height="90"
+        width="90"
         radius={1}
         color="rgb(110, 116, 161)"
         ariaLabel="puff-loading"
